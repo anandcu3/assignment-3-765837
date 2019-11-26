@@ -1,0 +1,64 @@
+gcpkey@cluster-eabf-m:~/ass3$ hdfs dfsadmin -report
+Configured Capacity: 1056751181824 (984.18 GB)
+Present Capacity: 1003765593900 (934.83 GB)
+DFS Remaining: 1003736195072 (934.80 GB)
+DFS Used: 29398828 (28.04 MB)
+DFS Used%: 0.00%
+Under replicated blocks: 0
+Blocks with corrupt replicas: 0
+Missing blocks: 0
+Missing blocks (with replication factor 1): 0
+Pending deletion blocks: 0
+
+-------------------------------------------------
+Live datanodes (2):
+
+Name: 10.166.0.5:9866 (cluster-eabf-w-1.europe-north1-c.c.forward-subject-254912.internal)
+Hostname: cluster-eabf-w-1.europe-north1-c.c.forward-subject-254912.internal
+Decommission Status : Normal
+Configured Capacity: 528375590912 (492.09 GB)
+DFS Used: 14699414 (14.02 MB)
+Non DFS Used: 4894606442 (4.56 GB)
+DFS Remaining: 501868097536 (467.40 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 94.98%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 2
+Last contact: Sun Nov 17 16:11:29 UTC 2019
+Last Block Report: Sun Nov 17 14:07:38 UTC 2019
+
+
+Name: 10.166.0.6:9866 (cluster-eabf-w-0.europe-north1-c.c.forward-subject-254912.internal)
+Hostname: cluster-eabf-w-0.europe-north1-c.c.forward-subject-254912.internal
+Decommission Status : Normal
+Configured Capacity: 528375590912 (492.09 GB)
+DFS Used: 14699414 (14.02 MB)
+Non DFS Used: 4894606442 (4.56 GB)
+DFS Remaining: 501868097536 (467.40 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 94.98%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 2
+Last contact: Sun Nov 17 16:11:29 UTC 2019
+Last Block Report: Sun Nov 17 14:07:38 UTC 2019
+
+
+gcpkey@cluster-eabf-m:~/ass3$ hdfs getconf -confKey dfs.blocksize
+134217728
+
+
+gcpkey@cluster-eabf-m:~/ass3$ yarn node -list
+19/11/17 16:15:03 INFO client.RMProxy: Connecting to ResourceManager at cluster-eabf-m/10.166.0.4:8032
+19/11/17 16:15:04 INFO client.AHSProxy: Connecting to Application History server at cluster-eabf-m/10.166.0.4:10200
+Total Nodes:2
+         Node-Id             Node-State Node-Http-Address       Number-of-Running-Containers
+cluster-eabf-w-1.europe-north1-c.c.forward-subject-254912.internal:33845                RUNNING cluster-eabf-w-1.europe-north1-c.c.forward-subject-254912.internal:8042                            0
+cluster-eabf-w-0.europe-north1-c.c.forward-subject-254912.internal:35927                RUNNING cluster-eabf-w-0.europe-north1-c.c.forward-subject-254912.internal:8042            
